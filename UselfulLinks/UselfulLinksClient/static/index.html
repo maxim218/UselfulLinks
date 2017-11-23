@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Useful Links</title>
+    <link rel="stylesheet" type = "text/css" href="./styles/mainStyle.css">
+</head>
+<body>
+
+<div id = "fonBox" hidden></div>
+<div id = "messageBox" hidden>
+    <h2>Сообщение</h2>
+    <hr>
+    <br>
+    <p id = "alertWindowText" align = "center"></p>
+    <br>
+    <div align = "center">
+        <button style = "width: 150px;" id = "okBtn">OK</button>
+    </div>
+    <br>
+</div>
+
+<div id = "centerBox">
+    <h1>Useful Links</h1>
+    <hr>
+
+    <div id = "authorization" hidden>
+        <h2>Авторизация</h2>
+        <table>
+            <tr>
+                <td><label>Логин</label></td>
+                <td><input type = "text" placeholder="Login" class = "impField" id = "t11" spellcheck = 'false' autocomplete = 'off' maxlength="20"></td>
+            </tr>
+            <tr>
+                <td><label>Пароль</label></td>
+                <td><input type = "password" placeholder="Password" class = "impField"  id = "t22"  spellcheck = 'false' autocomplete = 'off' maxlength="20"></td>
+            </tr>
+        </table>
+        <br>
+        <button id = "auth">Войти в аккаунт</button>
+        <br>
+        <br>
+        <span id = "regMoveBtn" class = "myLink">Регистрация на сайте</span>
+    </div>
+
+    <div id = "registration" hidden>
+        <h2>Регистрация</h2>
+        <table>
+            <tr>
+                <td><label>Логин</label></td>
+                <td><input type = "text" placeholder="Login" class = "impField" id = "t111" spellcheck = 'false' autocomplete = 'off' maxlength="20"></td>
+            </tr>
+            <tr>
+                <td><label>Пароль</label></td>
+                <td><input type = "password" placeholder="Password" class = "impField"  id = "t222"  spellcheck = 'false' autocomplete = 'off' maxlength="20"></td>
+            </tr>
+        </table>
+        <br>
+        <button id = 'reg'>Зарегистрироваться</button>
+        <br>
+        <br>
+        <span id = "authMoveBtn" class = "myLink">Авторизация на сайте</span>
+    </div>
+
+    <div id = "recordspage" hidden>
+        <br>
+        <span style = "font-size: 30px;" id = "userLabel"></span>
+        <br>
+        <br>
+        <span id = "outFromIt" onclick = "getOutFromSystemFunction()" class = "myLink">Выход</span>
+        <br>
+        <br>
+        <hr>
+        <h2>Добавление записи</h2>
+        <br>
+        <table>
+            <tr>
+                <td><label>Краткое описание</label></td>
+                <td><input type = "text" placeholder="Краткое описание" class = "impField" id = "t444" spellcheck = 'false' autocomplete = 'off'></td>
+            </tr>
+            <tr>
+                <td><label>Ссылка</label></td>
+                <td><input type = "text" placeholder="Ссылка" class = "impField"  id = "t555"  spellcheck = 'false' autocomplete = 'off'></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <label>Подробное описание</label>
+        <br>
+        <br>
+        <textarea placeholder="Подробное описание" class = "textAreaClass"  id = "t666"  spellcheck = 'false' autocomplete = 'off'></textarea>
+        <br>
+        <br>
+        <br>
+        <button id = "addRecordBtn">Добавить запись</button>
+        <br>
+        <br>
+        <hr>
+        <h2>Список записей</h2>
+        <div id = "recordsContentBox"></div>
+    </div>
+
+</div>
+
+<script>
+    function getOutFromSystemFunction() {
+        localStorage.setItem("LOGIN", "~~~~@@@@~~~~@@@~~----~~@@--");
+        localStorage.setItem("PASSWORD", "~~~~@@@@~~~~@@@~~----~~@@--");
+        window.location = "/";
+    }
+
+    function openLink(element) {
+        const s = element.id;
+        const w = open(s.toString());
+    }
+</script>
+
+<script src = "ResultScript.js"></script>
+
+</body>
+</html>
